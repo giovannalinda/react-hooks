@@ -7,7 +7,8 @@
     "standard-react"
   ],
   "plugins": [
-    "only-warn"
+    "only-warn",
+    "react-hooks"
   ],
   "rules": {
     "comma-dangle": [
@@ -21,6 +22,9 @@
       }
     ],
     "react/react-in-jsx-scope": "off",
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }
