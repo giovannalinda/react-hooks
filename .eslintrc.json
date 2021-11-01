@@ -1,29 +1,37 @@
 {
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
   "extends": [
-    "react-app",
-    "react-app/jest",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
     "standard",
-    "standard-jsx",
-    "standard-react"
+    "prettier"
   ],
-  "plugins": [
-    "only-warn",
-    "react-hooks"
-  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-hooks", "prettier"],
   "rules": {
-    "comma-dangle": [
-      "error",
-      {
-        "arrays": "always-multiline",
-        "objects": "always-multiline",
-        "imports": "always-multiline",
-        "exports": "always-multiline",
-        "functions": "always-multiline"
-      }
-    ],
+    "prettier/prettier": "error",
+    "import/order": 2,
+    "no-use-before-define": "off",
+    "no-console": ["error", { "allow": ["error"] }],
+    "comma-dangle": ["error", "always-multiline"],
+    "space-before-function-paren": "off",
+    "space-before-paren": "off",
+    "indent": "off",
     "react/react-in-jsx-scope": "off",
-    "no-unused-vars": "off",
-
+    "react/prop-types": "off",
+    "camelcase": "off",
+    "multiline-ternary": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn"
   }
